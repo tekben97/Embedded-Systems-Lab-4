@@ -9,7 +9,7 @@ int main(void)
     TB0CCR0 = 16000;                         // PWM Period
     TB0CCTL1 = OUTMOD_7;                      // CCR1 reset/set
     TB0CCR1 = 1600;                            // CCR1 PWM duty cycle
-    TB0CTL = TBSSEL__ACLK | MC__UP | TBCLR;  // SMCLK, up mode, clear TBR
+    TB0CTL = TBSSEL__ACLK | MC__UP | TBCLR;  // ACLK, up mode, clear TBR
     while(1)
     {
         P1OUT ^=BIT6;// For debugger
